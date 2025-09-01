@@ -72,6 +72,7 @@ body {
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
+  transition: background-color 0.5s ease;
 }
 ul {
   list-style-type: none;
@@ -231,4 +232,26 @@ main {
 .btn-hero:hover {
   color: var(--clr-white);
   background: var(--clr-black);
+}
+
+/* Toast notification styles */
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--clr-primary-5);
+  color: var(--clr-white);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+  font-size: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+.toast.show {
+  opacity: 1;
+  pointer-events: auto;
 }
